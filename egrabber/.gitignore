@@ -1,0 +1,6 @@
+bin/
+build/
+__pycache__/
+*.pyc
+*.egg-info/
+src/egrabber_camera/*.dll

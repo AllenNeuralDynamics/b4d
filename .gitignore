@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+*.pyd
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+*.zarr/
+*.ome.zarr/
+egrabber/bin/
+*chain_done.flag
+docs.zip
+*.log
+
+# C build outputs (Makefile, clang-cl / MSVC)
+*.o
+*.a
+*.obj
+*.lib
+*.exp
+*.pdb
+*.dll
+*.exe
+
+# run outputs
+**/validation/results/
+stream_sim_out/
+b4d_out/
+
+# Claude Code: local agent instructions and settings, not part of the published repository
+CLAUDE.md
+CLAUDE_*.md
+.claude/
+.DS_Store
+sandbox/

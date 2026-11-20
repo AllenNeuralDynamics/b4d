@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use b4d, please cite it using the metadata below, together with the B3D paper it builds on."
+title: "B4D: fast noise-bounded compression of scientific camera images"
+type: software
+authors:
+  - family-names: Glaser
+    given-names: Adam
+    affiliation: Allen Institute for Neural Dynamics
+version: 0.1.0
+doi: 10.5281/zenodo.XXXXXXX
+license: MIT
+repository-code: "https://github.com/AllenNeuralDynamics/b4d"
+keywords:
+  - image compression
+  - microscopy
+  - scientific cameras
+  - zarr
+  - noise-bounded compression
+references:
+  - type: article
+    title: "A real-time compression library for microscopy images"
+    authors:
+      - family-names: Balázs
+        given-names: Balint
+      - family-names: Deschamps
+        given-names: Joran
+      - family-names: Albert
+        given-names: Marvin
+      - family-names: Ries
+        given-names: Jonas
+      - family-names: Hufnagel
+        given-names: Lars
+    year: 2017
+    journal: bioRxiv
+    doi: 10.1101/164624

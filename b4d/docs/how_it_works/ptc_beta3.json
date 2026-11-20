@@ -1,0 +1,217 @@
+{
+ "source": "IMX411 calibration recordings (exaSPIM beta3 camera, Vieworks VP-151MX): 11 LED flat-field levels, darks before and after; analysed with the b4d validation pipeline",
+ "method": "per pixel: temporal mean and variance over all frames of each recording, minus that pixel's dark mean and dark variance, so variance_ADU2 is the photon (shot) noise alone; per LED level: the median over the sensor. dark read_noise_ADU: median per-pixel temporal standard deviation of the darks",
+ "led_percent": [
+  0.1,
+  0.2,
+  0.4,
+  0.8,
+  1.6,
+  3.1,
+  6.2,
+  12.5,
+  25.0,
+  50.0,
+  100.0
+ ],
+ "signal_ADU": [
+  20.67626953125,
+  40.54423904418945,
+  80.1241226196289,
+  157.86103439331055,
+  305.33808517456055,
+  555.05126953125,
+  1007.6991195678711,
+  1779.1930656433105,
+  2999.1203117370605,
+  4845.10791015625,
+  7461.8056640625
+ ],
+ "variance_ADU2": [
+  28.513819694519043,
+  55.58154010772705,
+  109.60918140411377,
+  218.91961669921875,
+  410.27099609375,
+  759.2912554740906,
+  1382.4667015075684,
+  2444.101011276245,
+  4095.727240562439,
+  6596.293019294739,
+  10061.167720794678
+ ],
+ "fit_conversion_ADU_per_e": 1.3761277044497897,
+ "dark": {
+  "pre": {
+   "offset_ADU": 33.96728515625,
+   "read_noise_ADU": 3.6381331007539113
+  },
+  "post": {
+   "offset_ADU": 34.004493713378906,
+   "read_noise_ADU": 3.6310895874519606
+  }
+ },
+ "files": [
+  "dark, before the flats (channel 561, recorded 2026-11-04 14:51:02)",
+  "LED flat 0.1 % (channel 488, recorded 2026-11-04 23:15:15)",
+  "LED flat 0.2 % (channel 488, recorded 2026-11-04 23:03:22)",
+  "LED flat 0.4 % (channel 488, recorded 2026-11-04 22:51:30)",
+  "LED flat 0.8 % (channel 488, recorded 2026-11-04 22:39:37)",
+  "LED flat 1.6 % (channel 488, recorded 2026-11-04 22:27:44)",
+  "LED flat 3.1 % (channel 488, recorded 2026-11-04 22:15:53)",
+  "LED flat 6.2 % (channel 488, recorded 2026-11-04 22:03:59)",
+  "LED flat 12.5 % (channel 488, recorded 2026-11-04 21:52:05)",
+  "LED flat 25 % (channel 488, recorded 2026-11-04 21:40:09)",
+  "LED flat 50 % (channel 488, recorded 2026-11-04 21:28:13)",
+  "LED flat 100 % (channel 488, recorded 2026-11-04 21:16:18)",
+  "dark, after the flats (channel 488, recorded 2026-11-05 04:17:15)"
+ ],
+ "variance_is": "photon noise only (dark variance removed per pixel)",
+ "round_trip": {
+  "source": "dark_pre and the 11 flats, sensor rows 0-511 (8 units of 256 x 3584), first 128 frames, raw frames round-tripped through b4d m1_a3 q = 1 with the formula (m1_a3) and with the noise-unit table (m1_a3_xv)",
+  "method": "per pixel: drift-corrected temporal variance of the raw and of the b4d frames; added = sum(b4d - raw) / sum(raw) over pixels with raw variance under 4x the median, in %; signal: median of the raw mean minus the dark_pre mean of the same pixel",
+  "recordings": {
+   "dark_pre": {
+    "signal_ADU": 0.0,
+    "raw_var_ADU2": 13.124651601218149,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 10.524320606616346,
+    "added_percent_table": 8.391863024748023
+   },
+   "flat_0.1": {
+    "signal_ADU": 20.09375,
+    "raw_var_ADU2": 41.56688046046142,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.24418090810655,
+    "added_percent_table": 7.997186403637614
+   },
+   "flat_0.2": {
+    "signal_ADU": 39.6015625,
+    "raw_var_ADU2": 68.20388425537156,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.138530002342176,
+    "added_percent_table": 8.139522456212669
+   },
+   "flat_0.4": {
+    "signal_ADU": 78.5625,
+    "raw_var_ADU2": 121.41998773615708,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.185520143291109,
+    "added_percent_table": 8.208858230518965
+   },
+   "flat_0.8": {
+    "signal_ADU": 155.140625,
+    "raw_var_ADU2": 228.72078460078194,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.128471228685921,
+    "added_percent_table": 8.057830059979215
+   },
+   "flat_1.6": {
+    "signal_ADU": 300.4140625,
+    "raw_var_ADU2": 416.2543836352892,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.393147410850075,
+    "added_percent_table": 8.416048840669623
+   },
+   "flat_3.1": {
+    "signal_ADU": 546.0703125,
+    "raw_var_ADU2": 756.5949858160704,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.29345735765945,
+    "added_percent_table": 8.222958072478976
+   },
+   "flat_6.2": {
+    "signal_ADU": 991.1875,
+    "raw_var_ADU2": 1363.6192382165766,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.317483925677019,
+    "added_percent_table": 8.272736354508908
+   },
+   "flat_12.5": {
+    "signal_ADU": 1748.96875,
+    "raw_var_ADU2": 2409.0888208059346,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.23839517202445,
+    "added_percent_table": 8.249379902534695
+   },
+   "flat_25": {
+    "signal_ADU": 2946.53125,
+    "raw_var_ADU2": 4009.4790626689205,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.31773446856701,
+    "added_percent_table": 8.31972382055058
+   },
+   "flat_50": {
+    "signal_ADU": 4762.53125,
+    "raw_var_ADU2": 6463.501535978843,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.324707022635229,
+    "added_percent_table": 8.333484206378099
+   },
+   "flat_100": {
+    "signal_ADU": 7404.1171875,
+    "raw_var_ADU2": 9909.714080037094,
+    "frames": 128,
+    "pixels": 7266304,
+    "added_percent_formula": 8.442184743149658,
+    "added_percent_table": 8.45184930320975
+   }
+  }
+ },
+ "fig1a": {
+  "source": "the same recordings: raw temporal variance (drift removed, dark not taken out) per LED level, sensor median",
+  "signal_ADU": [
+   20.67626953125,
+   40.54423904418945,
+   80.1241226196289,
+   157.8610382080078,
+   305.33807373046875,
+   555.05126953125,
+   1007.6990966796875,
+   1779.193115234375,
+   2999.120361328125,
+   4845.10791015625,
+   7461.8056640625
+  ],
+  "variance_ADU2": [
+   42.08357620239258,
+   69.33821105957031,
+   123.60325622558594,
+   233.27371215820312,
+   425.1253967285156,
+   774.7039184570312,
+   1398.5435791015625,
+   2460.75048828125,
+   4113.0166015625,
+   6613.90625,
+   10079.1103515625
+  ],
+  "dark_variance_ADU2": 13.23601245880127,
+  "K_ADU_per_e": 1.3706069692079192,
+  "residual_percent": [
+   1.2083683772335594,
+   0.767227762934512,
+   0.443809426549605,
+   1.5742282021980476,
+   -1.5546254353767,
+   0.09174701380252433,
+   0.29660583560232273,
+   0.3633034945249579,
+   -0.2634241646845303,
+   -0.6058209652332851,
+   -1.6006224885758888
+  ],
+  "pixels": "ptc_beta3_pixels.npz: 5,000 random pixels (seed 0), signal above own dark mean and raw variance"
+ }
+}

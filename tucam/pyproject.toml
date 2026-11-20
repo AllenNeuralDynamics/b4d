@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tucam-camera"
+version = "0.1.0"
+description = "Tucsen camera driver (TUCam SDK V3) with a zero-copy block interface for the B4D writer"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Adam Glaser" }, { name = "Claude" }]
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+# ../b4d (pip install b4d/); not on PyPI
+b4d = ["b4d>=0.1.0"]
+dev = ["pytest", "black", "isort", "flake8"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["tucam_camera"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-p no:cacheprovider -p no:napari -p no:napari-plugin-engine -p no:npe2"

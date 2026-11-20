@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77", "numpy>=1.20"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "b4d"
+version = "0.1.0"
+description = "B4D noise-aware microscopy image compression: Blosc2 codec, native sharded-zarr writer, CUDA encoder, zero-copy block ingest"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Adam Glaser" }, { name = "Claude" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.20"]
+
+[project.optional-dependencies]
+zarr = ["numcodecs>=0.10", "zarr>=3"]
+sim = ["scipy"]
+gpu = ["cupy-cuda12x"]
+tools = ["scipy", "psutil"]
+viewers = ["napari", "napari-ome-zarr", "dask"]
+dev = ["pytest", "numcodecs", "zarr>=3", "scipy", "black", "isort", "flake8"]
+
+[project.scripts]
+b4d-record = "b4d.ingest.cli:main"
+b4d-tune = "b4d.tune:main"
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py311", "py312"]
+exclude = "(build|__pycache__|docs)"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider -p no:napari -p no:napari-plugin-engine -p no:npe2 --import-mode=importlib"

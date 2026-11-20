@@ -1,0 +1,9 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    build
+max-complexity = 10
+max-line-length = 120
+# black formats slices as a[x : y]; E203 and W503 are the two rules that contradict black
+extend-ignore = E203, W503

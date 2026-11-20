@@ -1,0 +1,3 @@
+include LICENSE README.md setup.py pyproject.toml
+include src/b4d/_b4d.c src/b4d/*.h
+include src/c/*.c src/c/*.h

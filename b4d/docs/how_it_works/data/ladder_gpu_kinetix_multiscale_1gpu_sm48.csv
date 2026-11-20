@@ -1,0 +1,5 @@
+ngpu,step,copy_threads,block,timestamp,target,camera,units,stage,fps_offered,seconds,frames,dropped,sustained,camera_limited,write_s_per_block,compress_s_per_block,io_s_per_block,gpu_upload_s,gpu_kernel_s,gpu_download_s,gpu_host_s,host_tiles,writer_gbs,writer_fps,raw_gbs_achieved,ratio,lat_mean,groups,wall_s
+1,0,0,512,2026-11-19T07:35:11,gpu,kinetix,48,ladder,724.74,30,21504,0,1,0,0.725,0.0438,0.0023,0.0015,0.5285,0.0077,0.0050,0,7.389,721.6,7.218,2.968,0.725,0,55
+1,1,0,512,2026-11-19T07:36:07,gpu,kinetix,48,ladder,797.21,30,24064,0,1,0,0.8356,0.0437,0.0024,0.0008,0.6198,0.0109,0.0047,0,8.101,791.08,7.933,2.968,0.836,0,56
+1,2,0,512,2026-11-19T07:37:02,gpu,kinetix,48,ladder,876.93,30,26112,0,1,0,1.052,0.0437,0.0023,0.0006,0.8013,0.0128,0.0047,0,8.868,865.97,8.699,2.968,1.05,0,55
+1,3,0,512,2026-11-19T07:37:58,gpu,kinetix,48,ladder,964.62,30,28160,1024,0,0,1.115,0.0438,0.0023,0.0018,0.8471,0.0120,0.0046,0,9.195,897.93,9.042,2.968,1.54,0,56

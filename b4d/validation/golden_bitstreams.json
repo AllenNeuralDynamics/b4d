@@ -1,0 +1,91 @@
+{
+ "_image": {
+  "build": "clang 22.1.0 ",
+  "sha256": "ed688fb048598ffb4a046eca0be2d8119384897069d09b40fe543b8899b55f39",
+  "shape": [
+   16,
+   192,
+   256
+  ]
+ },
+ "above/ans/mode0/q0": [
+  "117c98f07935dcd5172bb55cb4bb6ffd87afd931dd5b5c433ec49c05aa3454dd",
+  314324
+ ],
+ "above/ans/mode1/q1": [
+  "3cce46cd15b6a4292b1a6d5dc4f76e4d8930233c2403a3a80a1d33cd4a38834c",
+  271259
+ ],
+ "above/ans/mode2/q1": [
+  "3814cad10267fd385c841455cb2dad8ec8f88f311e062d0f61b203b4898deb18",
+  271227
+ ],
+ "above/ans/mode2/q2": [
+  "ebe9153147ddafe0849eb64cdf99920437c8f42f195dc0ca87c2484ceb6c9fca",
+  193074
+ ],
+ "above/rice/mode0/q0": [
+  "04c2d992fb415c99143a78f5c5d005ed076a996009d1511334089627073462fb",
+  318375
+ ],
+ "above/rice/mode1/q1": [
+  "dd0172b6b16adaa354e8da9672369a6735fa78c2192964bd8c29ddd6e50e5329",
+  279366
+ ],
+ "above/rice/mode2/q1": [
+  "11efb48e62aeb1ba7db30c7c33e571c7b927b55cffe0ed4aaab7cd8b874021a3",
+  279362
+ ],
+ "above/rice/mode2/q2": [
+  "30fb23a3365ce2fcbe83a15243c5f2dac8abf9a009768457ecce038dbd7da47d",
+  194705
+ ],
+ "mean3d/ans/mode0/q0": [
+  "7f970183376ddc264bd0c9983e51e9d44d12312d3fea779deabaf2db4a889b94",
+  275391
+ ],
+ "mean3d/ans/mode1/q1": [
+  "373d075a808e2f00f226b9df31944a3ccd27d2b00ea7657418708793b53da63a",
+  235182
+ ],
+ "mean3d/ans/mode2/q1": [
+  "4785ba1277dbdf94671b88656e9f47a7af5c5b589285fdb40fad868934daf81e",
+  235033
+ ],
+ "mean3d/ans/mode2/q2": [
+  "9218feeea73aba62b42a5ecfe750353b5b91c08a192d90412104fbb14d00f30e",
+  160670
+ ],
+ "mean3d/rice/mode0/q0": [
+  "03004061128701e12817e81d9f75608d0535d7a046871e8c44be5299093b59a0",
+  278426
+ ],
+ "mean3d/rice/mode1/q1": [
+  "9ae8e872693e115d80a78ec5a572233c1f92479d874523c6bfc19d75fa28d8f9",
+  242521
+ ],
+ "mean3d/rice/mode2/q1": [
+  "6b8d7b833bba178aaba977049543a5d80f85cdbd6e7b3c21ce0db6f944fa7511",
+  240388
+ ],
+ "mean3d/rice/mode2/q2": [
+  "e34f9b6c8bb479620def018338e88c7d23efb99961d3096515d654827b5947f1",
+  169736
+ ],
+ "original/rlhuff/mode0/q0": [
+  "8269ab2afa22b372c38888c59580f22b0aa6a455e32123e8f615e4f06c3a76b7",
+  331111
+ ],
+ "original/rlhuff/mode1/q1": [
+  "83bd9c53e8753000762a294de31cf3c2d0606811bfc3a0f544826387c5866d77",
+  274031
+ ],
+ "original/rlhuff/mode2/q1": [
+  "8c65f0b671c13b6e88974bd4ee31a32c5f2d500ac4a3c5b5d6b2f6e6a6e04823",
+  271971
+ ],
+ "original/rlhuff/mode2/q2": [
+  "529ade0c7cc163e54dafb2f6f25df9d7b3b7ea76d1f2db8842f6a13a5bca5cf5",
+  174779
+ ]
+}

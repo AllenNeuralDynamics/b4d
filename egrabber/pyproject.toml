@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "egrabber-camera"
+version = "0.1.0"
+description = "Euresys eGrabber (Coaxlink) camera driver with a zero-copy block interface for the B4D writer"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Adam Glaser" }, { name = "Claude" }]
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+# ../b4d (pip install b4d/); not on PyPI
+b4d = ["b4d>=0.1.0"]
+gpu = ["cupy-cuda12x"]
+dev = ["pytest", "black", "isort", "flake8"]
+
+[project.scripts]
+egrabber-grab = "egrabber_camera.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["egrabber_camera"]
+
+# the engine DLL ships inside the package: build.py copies bin/egrabber_ingest.dll to src/egrabber_camera/, and a wheel
+# built after that includes it (a wheel built without it still installs; find_dll then looks in bin/ and the env)
+[tool.setuptools.package-data]
+egrabber_camera = ["egrabber_ingest.dll"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-p no:cacheprovider -p no:napari -p no:napari-plugin-engine -p no:npe2"
